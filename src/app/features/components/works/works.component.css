@@ -1,0 +1,93 @@
+
+.back-cont {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: -2;
+}
+
+.back {
+  width: 100%;
+  height: 100%;
+  background-image: url("../../../../assets/works_assets/code-back.jpg");
+  background-size: cover;
+  background-position: center;
+  will-change: transform;
+  filter: brightness(30%);
+}
+
+.marg-block {
+  width: 100%;
+  height: 80px;
+}
+
+.work-container {
+  z-index: 4;
+}
+
+.work-nav, .work-content {
+  min-height: calc(100vh - 80px);
+}
+
+.work-nav {
+  background-color: rgba(38, 38, 38, 0.2);
+  padding: 0;
+}
+
+.work-nav-single-cont {
+  padding: 0;
+  width: 100%;
+  border-bottom: solid 2px rgba(255,255,255,0.1);
+}
+
+.work-nav-link {
+  text-decoration: none;
+  cursor: pointer;
+  padding: 1.7em 10px 10px 1.3em;
+  display: flex;
+  flex-direction: column;
+  transition: 0.2s;
+}
+
+.work-nav-link:hover {
+  padding-left: 2em;
+  transition: 0.2s;
+}
+
+.work-nav-link:hover h3 {
+  color: aliceblue;
+  transition: 0.2s
+}
+
+.work-nav-link-active {
+  padding-left: 2em;
+  border-bottom: solid 2px  rgba(255,255,255,0.6);
+  transition: 0.2s;
+}
+
+.work-nav-link-active h3 {
+  color: aliceblue;
+  transition: 0.2s
+}
+
+.single-cont-head, .single-cont-short-descr {
+  color: var(--base-color);
+}
+
+.tech-icons fa-icon {
+  color: var(--base-color);
+  font-size: 1.4em;
+  padding: 5px;
+}
+
+@media(max-width: 767.2px) {
+  .work-nav, .work-content {
+    min-height: auto;
+  }
+  .work-nav-link {
+    padding: 1.3em 10px 0.4em 1.3em;
+  }
+}
+
+
+

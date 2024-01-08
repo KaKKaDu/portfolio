@@ -1,0 +1,48 @@
+
+<!--<div class="img-greet main-greet">
+  <div class="img-greet img-fixed">
+    <div class="img-greet image">
+
+    </div>
+  </div>
+</div>-->
+
+<div class="back-cont">
+  <div class="back">
+
+  </div>
+</div>
+
+<div class="greet-cont container-fluid">
+  <div class="greet-content">
+    <div class="portrait-image">
+      <div (mouseover)="onPortEnter()" (mouseleave)="onPortLeave()">
+        <img [ngClass]="{'display-img': !isNerdImg}" src="../../../../assets/home_assets/nerd_port.jpg" alt="portrait-nerd-image">
+        <img [ngClass]="{'display-img': isNerdImg}" src="../../../../assets/home_assets/smile_port.jpg" alt="portrait-smile-image">
+      </div>
+    </div>
+    <div class="greet-description">
+      <div class="greet-text">
+        <h2>
+          Hello, the stranger!
+        </h2>
+        <h3>
+          Like really, how did you find this website...
+        </h3>
+        <p>
+          I wanna introduce myself. I'm Kiryl Kartsialeu, begginer in the universe of front-end development, and this is my potential portfolio for whatever it might be useful.
+          I have an experience of using HTML5 and CSS in different kinds of projects, also diligently learning Angular and Typescript to be able to call myself a true front-end developer.
+          On this website you can find a little of my biography (sure connected with IT sphere), and also examples of my works, to help you understand what to expect from me, if you are potential customer or employer. So, if you are still here, I propose to click the button below and start the observation of my short, but valuable effort to programming.
+        </p>
+      </div>
+      <div class="greet-buttons">
+        <a class="accent-button" routerLink="/bio">
+          Start acquaintance
+        </a>
+      </div>
+      <div class="margin-block">
+
+      </div>
+    </div>
+  </div>
+</div>

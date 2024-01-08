@@ -1,0 +1,50 @@
+
+<div class="back-cont">
+  <div class="back">
+
+  </div>
+</div>
+
+<div class="marg-block">
+
+</div>
+
+<div class="container-fluid work-container">
+  <div class="row">
+    <div class="work-nav col-sm-12 col-md-4 col-lg-4 col-xl-4">
+      <div class="work-nav-single-cont">
+        <a class="work-nav-link" routerLink="./ecologic" routerLinkActive="work-nav-link-active">
+          <h3 class="single-cont-head">EcoLogic</h3>
+          <div class="tech-icons eco-icons">
+            <fa-icon [icon]="htmlIcon"></fa-icon>
+            <fa-icon [icon]="cssIcon"></fa-icon>
+            <fa-icon [icon]="bootstrapIcon"></fa-icon>
+          </div>
+        </a>
+      </div>
+      <div class="work-nav-single-cont">
+        <a class="work-nav-link" routerLink="./recipe" routerLinkActive="work-nav-link-active">
+          <h3 class="single-cont-head">Recipe Book</h3>
+          <div class="tech-icons eco-icons">
+            <fa-icon [icon]="htmlIcon"></fa-icon>
+            <fa-icon [icon]="cssIcon"></fa-icon>
+            <fa-icon [icon]="angularIcon"></fa-icon>
+          </div>
+        </a>
+      </div>
+      <div class="work-nav-single-cont">
+        <a class="work-nav-link" routerLink="./readapp" routerLinkActive="work-nav-link-active">
+          <h3 class="single-cont-head">ReadApp</h3>
+          <div class="tech-icons eco-icons">
+            <fa-icon [icon]="htmlIcon"></fa-icon>
+            <fa-icon [icon]="cssIcon"></fa-icon>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="work-content col-sm-12 col-md-8 col-lg-8 col-xl-8">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,95 @@
+
+body {
+  width: 100vw;
+}
+
+p {
+  color: var(--base-color);
+}
+
+.descr-text {
+  padding: 1.2rem 1.5rem 1.2rem 1.5rem;
+}
+
+.eco-cont {
+  padding-top: 20px;
+}
+
+.images-cont {
+  position: relative;
+  width: 100%;
+}
+
+.img-cont {
+  display: flex;
+  justify-content: center;
+}
+
+.img-cont img {
+  height: auto;
+  border: solid 1rem rgba(38, 38, 38, 0.3);
+  border-bottom: none;
+  width: 95%;
+  filter:brightness(80%);
+  transition: 0.1s;
+}
+
+.img-cont img:hover {
+  filter: brightness(95%);
+  transition: 0.1s;
+}
+
+.arrows-cont {
+  padding: 10px 2rem 0 2.5%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.arrows-cont a {
+  color: var(--base-color);
+  font-size: 1.6em;
+  cursor: pointer;
+}
+
+.slide-count {
+  color: var(--base-color);
+  font-size: 1.2em;
+  text-align: center;
+}
+
+.count-cont {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding-top: 5px;
+}
+
+.arrow-right, .arrow-left {
+  margin-left: 2rem;
+  margin-right: 2rem;
+  transition: 0.2s;
+}
+
+.arrow-right fa-icon, .arrow-left fa-icon {
+  transition: 0.2s;
+}
+
+.arrow-right:hover {
+  filter: drop-shadow(15px 0px rgba(255, 255, 255, 0.4));
+  transition: 0.2s;
+}
+
+.arrow-left:hover {
+  filter: drop-shadow(-15px 0 rgba(255, 255, 255, 0.4));
+}
+
+.arrow-left:hover fa-icon, .arrow-right:hover fa-icon {
+  color: aliceblue;
+  transition: 0.2s;
+}
+
+.accent-button {
+  margin-left: 1.5rem;
+  margin-top: 0.5rem;
+}

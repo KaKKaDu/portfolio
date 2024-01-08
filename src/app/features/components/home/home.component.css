@@ -1,0 +1,121 @@
+
+.back-cont {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+}
+
+.back {
+  width: 100%;
+  height: 100%;
+  background-image: url("../../../../assets/home_assets/back-home.jpg");
+  will-change: transform;
+  filter: brightness(40%);
+  background-size: cover;
+  background-position: center;
+  z-index: -10;
+}
+
+.display-img {
+  display: none;
+}
+
+.greet-cont {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  z-index: 100;
+  margin-top: 25vh;
+}
+
+.greet-text {
+  text-align: left;
+  color: aliceblue;
+  transition: 0.1s;
+}
+
+.greet-text p {
+  color: var(--base-color);
+  font-size: 1.05em;
+}
+
+.greet-content {
+  display: flex;
+  flex-direction: row;
+  max-width: 75vw;
+}
+
+.portrait-image img {
+  border: solid 10px rgb(184, 184, 184, 0.05);
+  width: auto;
+  height: 50vh;
+  filter: brightness(85%);
+}
+
+.portrait-image div {
+  position: relative;
+  overflow: hidden;
+  float: left;
+}
+
+.portrait-image div::before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 50%;
+  height: 130%;
+  opacity: 0;
+  top: -15%;
+  left: 25%;
+  background-color: rgba(208, 208, 208, 0.15);
+  z-index: -2;
+  animation: rotateanimation 3s linear infinite;
+  transform: rotate(35deg);
+  transition: 0.4s;
+}
+
+.portrait-image div:hover img {
+  filter: brightness(100%);
+}
+
+
+.portrait-image div:hover::before {
+  opacity: 1;
+  transition: 0.4s;
+}
+
+.greet-description {
+  padding-left: 30px;
+}
+
+.greet-buttons {
+  margin-top: 30px;
+}
+
+@keyframes rotateanimation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media(max-width: 980px) {
+
+  .greet-description {
+    padding-left: 0px;
+    margin-top: 30px;
+  }
+
+  .greet-content {
+    flex-direction: column;
+  }
+
+}
+
+@media (min-height: 800px ) and (max-width: 900px) {
+  .greet-cont {
+    margin-top: 15vh;
+  }
+}

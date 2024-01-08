@@ -1,0 +1,53 @@
+
+<img hidden src="../../../../../../assets/works_assets/ecologic-assets/eco-screen-1.png" alt="eco-1-image">
+<img hidden src="../../../../../../assets/works_assets/ecologic-assets/eco-screen-2.png" alt="eco-2-image">
+<img hidden src="../../../../../../assets/works_assets/ecologic-assets/eco-screen-3.png" alt="eco-3-image">
+
+<div class="eco-cont container-fluid">
+  <div class="row">
+    <div class="col-12 images-cont">
+      @switch(carouselSlide){
+        @case(1) {
+          <div class="img-cont img-1-cont">
+            <img src="../../../../../../assets/works_assets/ecologic-assets/eco-screen-1.png" alt="eco-1-image">
+          </div>
+        }
+        @case(2) {
+          <div class="img-cont img-2-cont">
+            <img src="../../../../../../assets/works_assets/ecologic-assets/eco-screen-2.png" alt="eco-2-image">
+          </div>
+        }
+        @case(3) {
+          <div class="img-cont img-3-cont">
+            <img src="../../../../../../assets/works_assets/ecologic-assets/eco-screen-3.png" alt="eco-3-image">
+          </div>
+        }
+      }
+      <div class="arrows-cont">
+        <a class="arrow-left" (click)="changeSlide(false)"><fa-icon [icon]="arrowLeftIcon"></fa-icon></a>
+        <div class="count-cont">
+          <span class="slide-count">{{ carouselSlide }}/3</span>
+        </div>
+        <a class="arrow-right" (click)="changeSlide(true)"><fa-icon [icon]="arrowRightIcon"></fa-icon></a>
+      </div>
+    </div>
+    <div class="col-12 descr-cont">
+      <p class="descr-text">
+        Alright, so there it is: the largest and prettiest HTML and CSS project I'd ever done.
+        It's pretty old, but it's already using responsive layout, and in (almost) all screens it works fine.
+        Idea of the setting is random, I just really like green colour, and it was enjoyable to create smth like that.
+        Although it's not a real programming project, I'm proud of that and it gave me the base knowledge of working with layouts.
+        <br>
+        Every my project is open source, so you can see all the code on my GitHub.
+      </p>
+    </div>
+    <div class="col-12 last-block">
+      <a class="accent-button" href="https://github.com/KaKKaDu/Ecologic" target="_blank">
+        Go to GitHub
+      </a>
+    </div>
+    <div class="margin-block">
+
+    </div>
+  </div>
+</div>

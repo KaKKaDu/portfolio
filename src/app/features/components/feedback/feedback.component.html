@@ -1,0 +1,86 @@
+
+<link rel="stylesheet" href="feedback.component.css">
+<div class="back-cont">
+  <div class="back">
+
+  </div>
+</div>
+
+<div class="marg-block">
+
+</div>
+
+<div class="feed-form-cont row">
+  <form class="feed-form col-10 offset-1 col-sm-10 offset-sm-1 col-md-6 offset-md-3"
+        (ngSubmit)="onFeedSubmit()"
+        [formGroup]="feedBackForm">
+    <div class="feed-form-content-cont">
+      <div class="feed-head-cont">
+        <div class="feed-cont-center">
+          <h2 class="feed-head">Please, leave your feedback!</h2>
+          <p>Your comments about this website will be stored on this page, so <a class="caut-easter">be cautious!</a>
+            <br>
+            <span class="not-displ">P.S. Sure you can use fake name, but pls</span>
+          </p>
+        </div>
+      </div>
+      <div class="feed-inputs-cont">
+        <div class="feed-cont-center">
+          <div class="feed-input-cont">
+            <input placeholder="Enter nickname" class="input input-name" formControlName="name">
+            <div class="input-label-cont">
+              <label>
+                Nickname
+              </label>
+              <a class="delete-field-content-btn"
+                 [ngClass]="{'not-displ': !feedBackForm.controls['name'].value}"
+                 (click)="clearFormInput(1)">
+                <fa-icon [icon]="cross"></fa-icon>
+              </a>
+            </div>
+          </div>
+          <div class="feed-input-cont">
+            <textarea class="input input-textarea input-comment" rows="5" formControlName="comment">
+
+            </textarea>
+            <div class="input-label-cont">
+              <label>Comment</label>
+              <a class="delete-field-content-btn"
+                 [ngClass]="{'not-displ': !feedBackForm.controls['comment'].value}"
+                 (click)="clearFormInput(2)">
+                <fa-icon [icon]="cross"></fa-icon>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="feed-submit-btn-cont">
+        <button
+          class="accent-button feed-submit-btn"
+          type="submit"
+          [ngClass]="{'not-clickable': !this.feedBackForm.valid}">
+          Leave a comment
+        </button>
+      </div>
+    </div>
+  </form>
+
+  <hr class="col-10 offset-1 hr-divide">
+
+  <div class="comments-cont row">
+    @for(comment of comments; track comment) {
+      <div class="comment col-8 offset-2">
+        <div class="comment-head">
+          <h4>{{comment.username}}</h4>
+        </div>
+        <div class="comment-content">
+          <pre>{{comment.content}}</pre>
+        </div>
+      </div>
+    } @empty {
+      <div></div>
+    }
+  </div>
+</div>
+
+

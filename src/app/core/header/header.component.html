@@ -1,0 +1,51 @@
+
+<nav class="navbar navbar-expand-md fixed-top" id="navigation"
+     [ngClass]="{'navbar-transparent': isTransparent, 'navbar-solid': !isTransparent}">
+  <div class="navbar-brand">
+    <div class="transparent-toggle">
+     <a (click)="onTransToggle()"
+       [ngClass]="{'trans-toggle-link-on': isTransparent, 'trans-toggle-link-off': !isTransparent}"
+       class="trans-toggle-link-on">
+        <fa-icon class="layer-icon" [icon]="layerIcon"></fa-icon>
+     </a>
+    </div>
+    <div class="logo-brand">
+      <fa-icon [icon]="birdIcon"></fa-icon>
+    </div>
+    <div class="logo-name">
+      <h2>KaKKaDu</h2>
+    </div>
+  </div>
+
+  <div class="show-menu-btn-cont">
+    <a role="button" class="show-menu-btn" (click)="menuExpand()" [ngClass]="{'show-menu-btn-expanded': menuExpanded}">
+      <fa-icon [icon]="caretDown"></fa-icon>
+    </a>
+  </div>
+
+  <div class="navbar-collapse collapse" id="navigation-nav"
+       [ngClass]="{'show': menuExpanded, 'navbar-transparent': isTransparent && menuExpanded, 'navbar-solid': !isTransparent && menuExpanded}">
+    <ul class="navbar-nav ms-auto">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/home" routerLinkActive="nav-link-clicked">
+          Home
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/bio" routerLinkActive="nav-link-clicked">
+          Biography
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/works" routerLinkActive="nav-link-clicked">
+          Works
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/feedback" routerLinkActive="nav-link-clicked">
+          Feedback
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
